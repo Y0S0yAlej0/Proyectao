@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Alejandro Salazar - Portafolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alejandro Salazar | Portafolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     body {
       background-color: #121212;
@@ -31,24 +32,17 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(to right, #0f0f0f, #1f1f1f);
       text-align: center;
-      animation: fadeIn 2s ease;
+      background: linear-gradient(to right, #0f0f0f, #1f1f1f);
     }
 
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: #ccc;
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
+    .hero img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #00ffc3;
+      margin-bottom: 20px;
     }
 
     .section {
@@ -65,13 +59,6 @@
       transform: scale(1.05);
     }
 
-    footer {
-      background-color: #1f1f1f;
-      color: #888;
-      padding: 1.5rem 0;
-      text-align: center;
-    }
-
     .btn-primary {
       background-color: #00ffc3;
       border: none;
@@ -81,10 +68,18 @@
     .btn-primary:hover {
       background-color: #00bfa3;
     }
+
+    footer {
+      background-color: #1f1f1f;
+      color: #888;
+      padding: 1.5rem 0;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
 
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
     <div class="container">
       <a class="navbar-brand" href="#">Alejandro Salazar</a>
@@ -95,61 +90,83 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#sobre">Sobre mí</a></li>
           <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#hobbies">Hobbies</a></li>
           <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
+  <!-- Hero -->
   <section class="hero" id="inicio">
-    <div class="container">
-      <h1>Hola, soy Alejandro Salazar</h1>
-      <p>Estudiante de programación | Apasionado por el desarrollo web y la tecnología</p>
-      <a href="#proyectos" class="btn btn-primary mt-4">Ver mis proyectos</a>
+    <div class="container" data-aos="fade-up">
+      <img src="https://i.imgur.com/tlC9doG.jpg" alt="Alejandro Salazar" />
+      <h1>Soy Alejandro Salazar</h1>
+      <p>Estudiante de programación apasionado por el backend</p>
+      <a href="#proyectos" class="btn btn-primary mt-4">Ver Proyectos</a>
     </div>
   </section>
 
+  <!-- Sobre mí -->
   <section class="section" id="sobre">
-    <div class="container text-center">
-      <h2>Sobre mí</h2>
-      <p class="mt-3">Soy un estudiante apasionado por el desarrollo web, el diseño de interfaces y la creación de experiencias digitales únicas. Me encanta aprender nuevas tecnologías y trabajar en proyectos que me reten a mejorar cada día.</p>
+    <div class="container" data-aos="fade-right">
+      <h2 class="text-center">Sobre mí</h2>
+      <p class="mt-4 text-center">
+        Soy Alejandro Salazar, estudiante de grado 11 en el INEM de Medellín, Colombia.  
+        Me apasiona el desarrollo backend y resolver problemas con código. Me especializo en tecnologías como Java, Python y C++, y tengo conocimientos sólidos en HTML, CSS y JavaScript.  
+        Me esfuerzo cada día por aprender, mejorar y construir herramientas útiles para el mundo real.
+      </p>
     </div>
   </section>
 
+  <!-- Proyectos -->
   <section class="section bg-dark" id="proyectos">
-    <div class="container">
-      <h2 class="text-center mb-5">Mis Proyectos</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card p-3">
-            <i class="fas fa-code fa-3x mb-3 text-info text-center"></i>
-            <h5 class="text-center">Sitio Web Personal</h5>
-            <p class="text-muted text-center">Diseñado con HTML, CSS y Bootstrap. Responsive y moderno.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card p-3">
-            <i class="fas fa-terminal fa-3x mb-3 text-info text-center"></i>
-            <h5 class="text-center">App de Terminal</h5>
-            <p class="text-muted text-center">Aplicación CLI hecha con Python para automatizar tareas.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card p-3">
-            <i class="fas fa-gamepad fa-3x mb-3 text-info text-center"></i>
-            <h5 class="text-center">Mini Juego Web</h5>
-            <p class="text-muted text-center">Juego simple en JavaScript para practicar lógica y eventos.</p>
+    <div class="container" data-aos="fade-up">
+      <h2 class="text-center mb-5">Proyecto Destacado</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card p-4">
+            <i class="fas fa-book fa-3x mb-3 text-info text-center"></i>
+            <h5 class="text-center">Bibliogest</h5>
+            <p class="text-center text-muted">Gestor de biblioteca desarrollado con Java, Spring Boot, HTML, CSS y JS usando metodología SCRUM.</p>
+            <div class="text-center">
+              <a href="https://github.com/Y0S0yAlej0/bibliogest.git" target="_blank" class="btn btn-primary">Ver en GitHub</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Hobbies -->
+  <section class="section" id="hobbies">
+    <div class="container" data-aos="fade-left">
+      <h2 class="text-center">Mis Hobbies</h2>
+      <ul class="mt-4 list-unstyled text-center">
+        <li>🏀 Me gustan los deportes</li>
+        <li>📚 Disfruto estudiar y aprender cosas nuevas</li>
+        <li>⚔️ Soy competitivo y me encantan los retos</li>
+        <li>💻 Programar es mi pasión</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Frase -->
+  <section class="section bg-dark">
+    <div class="container text-center" data-aos="zoom-in">
+      <blockquote class="blockquote">
+        <p class="mb-0">"Si lo puedes imaginar, lo puedes programar."</p>
+        <footer class="blockquote-footer text-light">Alejandro Salazar</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Contacto -->
   <section class="section" id="contacto">
-    <div class="container text-center">
+    <div class="container text-center" data-aos="fade-up">
       <h2>Contacto</h2>
-      <p>¿Te gustaría trabajar conmigo o tienes alguna pregunta? ¡Escríbeme!</p>
-      <a href="mailto:alejandro@email.com" class="btn btn-primary mt-3">Enviar Email</a>
+      <p>¿Te interesa trabajar conmigo o tienes alguna duda? ¡Escríbeme!</p>
+      <a href="mailto:alejandrosalazarespinal19@gmail.com" class="btn btn-primary mt-3">Enviar Email</a>
     </div>
   </section>
 
@@ -157,6 +174,11 @@
     <p>&copy; 2025 Alejandro Salazar. Todos los derechos reservados.</p>
   </footer>
 
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
