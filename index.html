@@ -153,12 +153,30 @@
                 "Fue un año muy caja, gracias por su compañía"
             </div>
 
-            <div class="photos">
+            <div class="upload-section" id="uploadSection">
+                <h3 style="text-align: center; color: #667eea; margin-bottom: 20px;">Carga tus fotos aquí</h3>
+                <div style="display: flex; flex-direction: column; gap: 15px; align-items: center;">
+                    <div>
+                        <label for="file1" style="cursor: pointer; background: #667eea; color: white; padding: 12px 25px; border-radius: 8px; display: inline-block;">
+                            📷 Seleccionar Foto 1
+                        </label>
+                        <input type="file" id="file1" accept="image/*" style="display: none;">
+                    </div>
+                    <div>
+                        <label for="file2" style="cursor: pointer; background: #f5576c; color: white; padding: 12px 25px; border-radius: 8px; display: inline-block;">
+                            📷 Seleccionar Foto 2
+                        </label>
+                        <input type="file" id="file2" accept="image/*" style="display: none;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="photos" id="photosContainer" style="display: none;">
                 <div class="photo-container">
-                    <img src="e81c15e0-57cf-4f1a-ab73-041dd461ccf5.jpg" alt="Foto grupal SENA" id="foto1">
+                    <img src="" alt="Foto grupal SENA" id="foto1">
                 </div>
                 <div class="photo-container">
-                    <img src="a2c81b90-939f-42c6-a997-92c42caa16c1.jpg" alt="Foto de compañeros" id="foto2">
+                    <img src="" alt="Foto de compañeros" id="foto2">
                 </div>
             </div>
 
@@ -173,7 +191,11 @@
     </div>
 
     <script>
-
+        // Las imágenes que enviaste se cargarán aquí
+        // Nota: En un entorno real, las rutas de las imágenes serían las URLs de tus fotos
+        const foto1 = document.getElementById('foto1');
+        const foto2 = document.getElementById('foto2');
+        
         // Simulación de carga de imágenes
         foto1.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="800" height="600"%3E%3Crect fill="%23ddd" width="800" height="600"/%3E%3Ctext x="50%25" y="50%25" text-anchor="middle" dy=".3em" fill="%23999" font-size="24" font-family="Arial"%3EFoto Grupal SENA%3C/text%3E%3C/svg%3E';
         foto2.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="800" height="600"%3E%3Crect fill="%23ddd" width="800" height="600"/%3E%3Ctext x="50%25" y="50%25" text-anchor="middle" dy=".3em" fill="%23999" font-size="24" font-family="Arial"%3EFoto de Compañeros%3C/text%3E%3C/svg%3E%3C/svg%3E';
