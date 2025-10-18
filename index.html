@@ -1,204 +1,142 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gracias Sección 10 - Grado Once</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agradecimiento a mi salón ❤️</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 
-        body {
-            font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .container {
-            max-width: 900px;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-            animation: fadeIn 1s ease-in;
-        }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f9f9ff, #e3f2fd);
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      overflow-x: hidden;
+    }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    header {
+      padding: 40px 20px 10px;
+      animation: fadeInDown 1s ease;
+    }
 
-        .header {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            padding: 40px;
-            text-align: center;
-            color: white;
-        }
+    header h1 {
+      font-size: 2.5rem;
+      color: #2a4d69;
+    }
 
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
+    header p {
+      font-size: 1.1rem;
+      color: #4f4f4f;
+      margin-top: 10px;
+    }
 
-        .header p {
-            font-size: 1.2em;
-            opacity: 0.95;
-        }
+    .gallery {
+      margin-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
 
-        .content {
-            padding: 40px;
-        }
+    .gallery img {
+      width: 90%;
+      max-width: 500px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-        .message {
-            text-align: center;
-            font-size: 1.5em;
-            color: #333;
-            margin: 30px 0;
-            line-height: 1.6;
-            font-style: italic;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 10px;
-            border-left: 5px solid #f5576c;
-        }
+    .gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    }
 
-        .photos {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-            margin: 30px 0;
-        }
+    .message {
+      margin: 50px auto;
+      max-width: 900px;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      padding: 0 20px;
+      color: #2c3e50;
+      animation: fadeInUp 1.5s ease;
+    }
 
-        .photo-container {
-            position: relative;
-            overflow: hidden;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
+    footer {
+      margin-top: auto;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #777;
+      background-color: #f1f1f1;
+      width: 100%;
+    }
 
-        .photo-container:hover {
-            transform: scale(1.02);
-        }
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
 
-        .photo-container img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 30px;
-            background: #f8f9fa;
-            color: #666;
-            font-size: 0.9em;
-        }
-
-        .hearts {
-            font-size: 2em;
-            margin: 20px 0;
-            animation: heartbeat 1.5s infinite;
-        }
-
-        @keyframes heartbeat {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
-            }
-        }
-
-        @media (max-width: 600px) {
-            .header h1 {
-                font-size: 1.8em;
-            }
-
-            .message {
-                font-size: 1.2em;
-            }
-
-            .content {
-                padding: 20px;
-            }
-        }
-    </style>
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>¡Gracias Sección 10!</h1>
-            <p>Grado Once - Momentos Inolvidables</p>
-        </div>
+  <header>
+    <h1>💫 Gracias por un año inolvidable 💫</h1>
+    <p>Un pequeño homenaje para todos mis compañeros del salón.</p>
+  </header>
 
-        <div class="content">
-            <div class="hearts">❤️ 💛 💚</div>
+  <div class="gallery">
+    <img src="a2c81b90-939f-42c6-a997-92c42caa16c1.jpg" alt="Grupo completo">
+    <img src="e81c15e0-57cf-4f1a-ab73-041dd461ccf5.jpg" alt="Amigos del salón">
+  </div>
 
-            <div class="message">
-                "Fue un año muy caja, gracias por su compañía"
-            </div>
+  <div class="message">
+    <p>
+      Este año estuvo lleno de momentos increíbles: risas, bromas, trabajos en grupo, madrugones y mil historias que quedarán en la memoria.
+      No solo compartimos clases, sino también sueños, aprendizajes y experiencias que nos ayudaron a crecer juntos.
+    </p>
+    <br>
+    <p>
+      Gracias a cada uno por su energía, por ser parte de esta etapa tan especial y por los recuerdos que ahora forman parte de mi vida. 
+      Me alegra haber compartido con personas tan auténticas, con las que cada día fue una aventura distinta.
+    </p>
+    <br>
+    <p>
+      Puede que terminemos esta etapa, pero lo vivido quedará grabado para siempre.  
+      ¡Gracias por tanto, compañeros! ❤️  
+      <br><strong>— Con cariño, un compañero más del INEM</strong>
+    </p>
+  </div>
 
-            <div class="upload-section" id="uploadSection">
-                <h3 style="text-align: center; color: #667eea; margin-bottom: 20px;">Carga tus fotos aquí</h3>
-                <div style="display: flex; flex-direction: column; gap: 15px; align-items: center;">
-                    <div>
-                        <label for="file1" style="cursor: pointer; background: #667eea; color: white; padding: 12px 25px; border-radius: 8px; display: inline-block;">
-                            📷 Seleccionar Foto 1
-                        </label>
-                        <input type="file" id="file1" accept="image/*" style="display: none;">
-                    </div>
-                    <div>
-                        <label for="file2" style="cursor: pointer; background: #f5576c; color: white; padding: 12px 25px; border-radius: 8px; display: inline-block;">
-                            📷 Seleccionar Foto 2
-                        </label>
-                        <input type="file" id="file2" accept="image/*" style="display: none;">
-                    </div>
-                </div>
-            </div>
+  <footer>
+    © 2025 - Hecho con cariño para mis compañeros de clase.
+  </footer>
 
-            <div class="photos" id="photosContainer" style="display: none;">
-                <div class="photo-container">
-                    <img src="" alt="Foto grupal SENA" id="foto1">
-                </div>
-                <div class="photo-container">
-                    <img src="" alt="Foto de compañeros" id="foto2">
-                </div>
-            </div>
-
-            <div class="hearts">🎓 ✨ 🌟</div>
-        </div>
-
-        <div class="footer">
-            <p>Con cariño y gratitud para todos mis compañeros</p>
-            <p style="margin-top: 10px;">Sección 10 - Grado Once</p>
-            <p style="margin-top: 10px; font-size: 0.8em;">Recuerdos que durarán para siempre 💫</p>
-        </div>
-    </div>
-
-    <script>
-        // Las imágenes que enviaste se cargarán aquí
-        // Nota: En un entorno real, las rutas de las imágenes serían las URLs de tus fotos
-        const foto1 = document.getElementById('foto1');
-        const foto2 = document.getElementById('foto2');
-        
-        // Simulación de carga de imágenes
-        foto1.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="800" height="600"%3E%3Crect fill="%23ddd" width="800" height="600"/%3E%3Ctext x="50%25" y="50%25" text-anchor="middle" dy=".3em" fill="%23999" font-size="24" font-family="Arial"%3EFoto Grupal SENA%3C/text%3E%3C/svg%3E';
-        foto2.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="800" height="600"%3E%3Crect fill="%23ddd" width="800" height="600"/%3E%3Ctext x="50%25" y="50%25" text-anchor="middle" dy=".3em" fill="%23999" font-size="24" font-family="Arial"%3EFoto de Compañeros%3C/text%3E%3C/svg%3E%3C/svg%3E';
-    </script>
+  <script>
+    // Animación de aparición suave al hacer scroll
+    const elements = document.querySelectorAll('.message, .gallery img');
+    window.addEventListener('scroll', () => {
+      elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
+          el.style.opacity = 1;
+          el.style.transform = "translateY(0)";
+        }
+      });
+    });
+  </script>
 </body>
 </html>
